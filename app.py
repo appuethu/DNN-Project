@@ -7,18 +7,10 @@ from tensorflow.keras.models import load_model
 import shap
 import matplotlib.pyplot as plt
 
-
-# ---------------------------------------------------------
-# PAGE CONFIG
-# ---------------------------------------------------------
 st.set_page_config(page_title="HeartGuard+", layout="centered")
 st.title("❤️ HeartGuard+ — Heart Disease Prediction (DNN)")
 st.write("Deep Neural Network model with clinical + lifestyle features (2-input model) and SHAP explainability.")
 
-
-# ---------------------------------------------------------
-# PATH FIX (Because app.py is inside /app/)
-# ---------------------------------------------------------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH = os.path.join(BASE_DIR, "../data/heart_combined_synthetic.csv")
 
